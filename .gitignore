@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+
+# Env — real keys live only on the server, never in git.
+# (.env.example IS committed as the template.)
+.env
+.env.*
+!.env.example
+# Public build-time URL only (no secrets) — needed to build the frontend.
+!frontend/.env.production
+*.env.local
+*.env.snapshot
+
+# Node / Next.js
+node_modules/
+.next/
+.next-local/
+out/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data & runtime
+backend/recordings/*
+!backend/recordings/.gitkeep
+# Databases hold real student phone numbers + staff password hashes — never commit.
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+# Local snapshot folders contain .env copies and DB backups.
+snapshots/
+# NOTE: backend/data/*.index + *.pkl (FAISS RAG index) ARE committed —
+# the agent needs them to answer program questions on the server.
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,20 @@
+{
+  "location": {
+    "sources": [
+      {
+        "url": "https://www.ganpatuniversity.ac.in/contact-us/",
+        "summary": "GUNI window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-QJDNVNHX4K'); setTimeout(() => { ! function(f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1718698391738138'); fbq('track', \"PageView\"); }, \"9000\") Calendly.initBadgeWidget({ url: 'https://calendly.com/ganpatuniversity', text: 'Schedule online Admission Counselling Meeting with Us', color: '#00a2ff', textColor: '#ffffff', branding: true }); --> Schedule Online Admission Counselling Meeting with Us ADMISSION ENQUIRY- 2026 Admission Enquiry – 2026 ADMISSION ENQUIRY - 2026 &times; setTimeout(() => { var npf_d='https://admission.ganpatuniversity.ac.in'; var npf_c='453'; var npf_m='1'; var s=document.createElement(\"script\"); s.type=\"text/javascript\"; s.async=true; s.src=\"https://track.nopaperforms.com/js/track.js\"; document.body.appendChild(s); },5000); Close let npfW3d958f5a7ae9c156b93f8965f73fe3ea = new NpfWidgetsInit({ 'widgetId': '3d958f5a7ae9c156b93f8965f73fe3ea', 'baseurl': 'widgets.nopaperforms.com', 'formTitle': 'Feedback Form', 'titleColor': '#FF0033', 'bac"
+      }
+    ],
+    "canonical": "Ganpat University, Ganpat Vidyanagar, Kherva (near Mehsana), Gujarat 384012, India. Main campus is at Kherva, Mehsana — NOT Gandhinagar."
+  },
+  "scholarship": {
+    "sources": []
+  },
+  "transport": {
+    "sources": []
+  },
+  "placement": {
+    "sources": []
+  }
+}

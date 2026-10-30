@@ -1,0 +1,274 @@
+INFO:     Started server process [7480]
+INFO:     Waiting for application startup.
+INFO:gunivox:gunivox starting up env=dev
+INFO:gunivox.dialer:dialer started (tick=30.0s, max_concurrent=5)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox:prewarm complete (embed + chat + tts ws)
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=1)
+INFO:     connection open
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     connection closed
+INFO:gunivox.live:live ws disconnected user=1
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=1)
+INFO:     connection open
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:gunivox.calls:originate lead_id=1 to=+917990267016
+INFO:httpx:HTTP Request: POST https://api.vobiz.ai/api/v1/Account/MA_U0V5JKA1/Call/ "HTTP/1.1 201 Created"
+INFO:gunivox.vobiz_webhooks:vobiz-answer call_uuid=ace0c521-f059-40aa-aa6d-368c5763ef6d ws=wss://api.gunivox.online/vobiz/stream/ace0c521-f059-40aa-aa6d-368c5763ef6d xml_len=250
+INFO:     3.110.99.6:0 - "WebSocket /vobiz/stream/ace0c521-f059-40aa-aa6d-368c5763ef6d" [accepted]
+INFO:     connection open
+INFO:gunivox.bridge:vobiz call ace0c521-f059-40aa-aa6d-368c5763ef6d connected (db_call_id=25)
+INFO:gunivox.bridge:vobiz call ace0c521-f059-40aa-aa6d-368c5763ef6d start stream=4f01b719-5e5b-476e-8715-6d8bdaf765f6 data={'sequenceNumber': 0, 'start': {'callId': 'ace0c521-f059-40aa-aa6d-368c5763ef6d', 'streamId': '4f01b719-5e5b-476e-8715-6d8bdaf765f6', 'accountId': '535258', 'tracks': ['inbound'], 'mediaFormat': {'encoding': 'audio/x-l16', 'sampleRate': 16000}}, 'extra_headers': '{}'}
+INFO:gunivox.bridge:vobiz call ace0c521-f059-40aa-aa6d-368c5763ef6d sending greet (~7.0s)
+INFO:gunivox.bridge:vobiz call ace0c521-f059-40aa-aa6d-368c5763ef6d first media frame received
+INFO:gunivox.bridge:vobiz call ace0c521-f059-40aa-aa6d-368c5763ef6d greet send starting
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:vobiz call ace0c521-f059-40aa-aa6d-368c5763ef6d greet send DONE
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 711ms]: મજામાં, મારું નામ સત્યન પારેખ છે.
+INFO:gunivox.bridge:turn 1 prelude playing (~1.14s)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.rag:rag translated 'મજામાં, મારું નામ સત્યન પારેખ છે.' -> 'I am fine, my name is Satyan Parekh.'
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:turn 1 brain-TTFA=3724ms
+INFO:gunivox.brain:turn complete: નમસ્તે સત્યન જી, તમે કયા પ્રોગ્રામ વિશે જાણવા માંગો છો? (latency=4114ms)
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 678ms]: મને એમબીએમાં ઇન્ટરેસ્ટ છે.
+INFO:gunivox.bridge:turn 2 prelude playing (~1.37s)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.rag:rag translated 'મને એમબીએમાં ઇન્ટરેસ્ટ છે.' -> 'I am interested in an MBA.'
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:turn 2 brain-TTFA=2956ms
+INFO:gunivox.brain:turn complete: સત્યન જી, તમને MBA માં કયો પ્રોગ્રામ પસંદ છે? MBA (International Business) કે MBA (Business Analytics)? (latency=3955ms)
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 493ms]: ઇન્ટરનેશનલ બિઝનેસ.
+INFO:gunivox.bridge:turn 3 prelude playing (~1.37s)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.rag:rag translated 'ઇન્ટરનેશનલ બિઝનેસ.' -> 'International Business.'
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:gunivox.bridge:turn 3 brain-TTFA=2864ms
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:gunivox.brain:turn complete: MBA (International Business) માટે અભ્યાસ સમય 2 વર્ષ છે અને ફી 160000 રૂપિયા છે. તમે આ પ્રોગ્રામ માટે અરજી કરવા માટે તૈયા (latency=4107ms)
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 550ms]: હા હા.
+INFO:gunivox.bridge:turn 4 prelude playing (~1.14s)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.rag:rag translated 'હા હા.' -> 'Yes, yes.'
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:turn 4 brain-TTFA=3775ms
+INFO:gunivox.brain:turn complete: સત્યન જી, અરજી પ્રક્રિયા માટે તમારે ફોર્મ ભરવું પડશે. શું તમે અરજી પ્રક્રિયા વિશે વધુ માહિતી જોઈએ છો? (latency=4518ms)
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 356ms]: શું પ્રો?
+INFO:gunivox.bridge:turn 5 prelude playing (~1.45s)
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.rag:rag translated 'શું પ્રો?' -> 'What’s up, bro?'
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:turn 5 brain-TTFA=3395ms
+INFO:gunivox.brain:turn complete: સત્યન જી, અરજી પ્રક્રિયા માટે, તમે Ganpat University's વેબસાઇટ પર જઈને ફોર્મ ડાઉનલોડ કરી શકો છો અને તેને ભરવા પછી જરૂરી  (latency=5022ms)
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 521ms]: હા હા.
+INFO:gunivox.bridge:turn 6 prelude playing (~1.14s)
+INFO:gunivox.rag:rag translated 'હા હા.' -> 'Yes, yes.'
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:turn 6 brain-TTFA=2107ms
+INFO:gunivox.brain:turn complete: સત્યન જી, તમે દસ્તાવેજો તરીકે કયા કયા કાગળો જરૂર પડશે તે જાણો છો? હું તમને સૂચના આપી શકું છું. (latency=4178ms)
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 409ms]: મને એમ કહ્યું કે
+INFO:gunivox.bridge:turn 7 prelude playing (~1.37s)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.rag:rag translated 'મને એમ કહ્યું કે' -> 'They told me that'
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:turn 7 brain-TTFA=2807ms
+INFO:gunivox.brain:turn complete: સારું! તમારું શુભ નામ શું છે? (latency=3547ms)
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 609ms]: કેમ છે મેં સત્ય ને કીધું ને?
+INFO:gunivox.bridge:turn 8 prelude playing (~1.37s)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.rag:rag translated 'કેમ છે મેં સત્ય ને કીધું ને?' -> 'How are you? Did I tell the truth?'
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:turn 8 brain-TTFA=2557ms
+INFO:gunivox.brain:turn complete: હા, સત્યન જી, તમે સારું છો. શું તમે કોઈ ખાસ પ્રોગ્રામ વિશે જાણવું માંગો છો? (latency=3848ms)
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 629ms]: કેમ્પસ વિશે કહો, કેમ્પસ કેવું છે? સારું છે.
+INFO:gunivox.bridge:turn 9 prelude playing (~1.14s)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.rag:rag translated 'કેમ્પસ વિશે કહો, કેમ્પસ કેવું છે? સારું છે.' -> "Tell me about the campus, how is the campus? It's good."
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:turn 9 brain-TTFA=2761ms
+INFO:gunivox.brain:turn complete: એ વિશે હું મદદ ન કરી શકું, પરંતુ ગણપત યુનિવર્સિટીના કોઈ પ્રોગ્રામ વિશે પૂછી શકો છો. (latency=3438ms)
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.sarvam.ai/speech-to-text "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:transcript [gu-IN, 396ms]: ઓકે.
+INFO:gunivox.bridge:turn 10 prelude playing (~1.45s)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:gunivox.rag:rag translated 'ઓકે.' -> 'Okay.'
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:gunivox.bridge:vobiz call ace0c521-f059-40aa-aa6d-368c5763ef6d disconnected
+INFO:     connection closed
+INFO:gunivox.bridge:saved recording: C:\Users\ronak\GUNIVOX Final\backend\recordings\ace0c521-f059-40aa-aa6d-368c5763ef6d.wav (4428800 bytes)
+INFO:gunivox.bridge:vobiz call ace0c521-f059-40aa-aa6d-368c5763ef6d ended duration=138.5s turns=10 media_frames=6920 ttfa_p50=2864
+INFO:gunivox.vobiz_webhooks:vobiz status call_uuid=ace0c521-f059-40aa-aa6d-368c5763ef6d event=Hangup status=completed duration=139
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     connection closed
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=2)
+INFO:     connection open
+INFO:gunivox.live:live ws disconnected user=1
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     connection closed
+INFO:gunivox.live:live ws disconnected user=1
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=1)
+INFO:     connection open
+INFO:     connection closed
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=2)
+INFO:     connection open
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     connection closed
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=3)
+INFO:     connection open
+INFO:gunivox.live:live ws disconnected user=1
+INFO:     connection closed
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=3)
+INFO:     connection open
+INFO:gunivox.live:live ws disconnected user=1
+INFO:     connection closed
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=3)
+INFO:     connection open
+INFO:gunivox.live:live ws disconnected user=1
+INFO:gunivox.live:live ws disconnected user=1
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     connection closed
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:gunivox.live:live ws disconnected user=1
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=1)
+INFO:     connection open
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     connection closed
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=2)
+INFO:     connection open
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     connection closed
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQwMjMzLCJleHAiOjE3NzkxMjY2MzN9.nk6w8UIj6YYMVuc688zY2eucSyexwmNvdDW5JnPdYAI" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=3)
+INFO:     connection open
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:gunivox.live:live ws disconnected user=1
+INFO:     connection closed
+INFO:gunivox.live:live ws disconnected user=1
+INFO:gunivox.live:live ws disconnected user=1
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     2409:40c1:e:e355:68d0:5fe2:d892:9143:0 - "WebSocket /api/live?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDQ2NjQ1LCJleHAiOjE3NzkxMzMwNDV9.UZmNm0Rmar6KG40aZoC3D8bft-Xu_71xfKPAe-_2KTo" [accepted]
+INFO:gunivox.live:live ws connected user=1 role=admin (subs=1)
+INFO:     connection open
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:gunivox.calls:originate lead_id=1 to=+917990267016
+INFO:httpx:HTTP Request: POST https://api.vobiz.ai/api/v1/Account/MA_U0V5JKA1/Call/ "HTTP/1.1 201 Created"
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:gunivox.vobiz_webhooks:vobiz status call_uuid=ddf8b9f7-623c-4fed-aaf5-d421029877c1 event=Hangup status=busy duration=0
+INFO:httpx:HTTP Request: GET https://api.sarvam.ai/ "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+INFO:     connection closed
+INFO:gunivox.live:live ws disconnected user=1

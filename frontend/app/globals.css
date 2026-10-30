@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Corporate dialer palette: crimson red on near-black (dark) or off-white (light).
+ * Designed to look like a real telephony console (think Avaya / 3CX / Zendesk Talk).
+ * All colors are CSS vars so a single `class="dark"` flip on <html> swaps the theme.
+ */
+
+@layer base {
+  :root {
+    /* Light mode (default if no .dark on <html>) */
+    --bg:           255 255 255;   /* page background */
+    --surface:      250 250 250;   /* card surface */
+    --elevated:     245 245 245;   /* hover/raised */
+    --border:       229 229 229;   /* hairline */
+    --hover:        241 241 241;   /* interactive hover */
+
+    --ink:           17  17  17;   /* primary text */
+    --ink-dim:       82  82  82;   /* secondary text */
+    --ink-faint:    150 150 150;   /* tertiary / placeholder */
+
+    --brand:        220  38  38;   /* red-600 — primary action */
+    --brand-hover:  185  28  28;   /* red-700 */
+    --brand-fg:     255 255 255;   /* text on brand bg */
+    --brand-subtle: 254 226 226;   /* red-100 — subtle bg */
+
+    --success:      22 163  74;
+    --warning:     217 119   6;
+    --danger:      220  38  38;
+    --info:         37  99 235;
+
+    --font-sans: "IBM Plex Sans", "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  .dark {
+    --bg:             10  10  12;   /* near-black */
+    --surface:        20  20  22;   /* card */
+    --elevated:       28  28  30;
+    --border:         42  42  46;
+    --hover:          32  32  36;
+
+    --ink:           245 245 245;
+    --ink-dim:       163 163 163;
+    --ink-faint:      96  96  96;
+
+    --brand:         239  68  68;   /* red-500 — pops more on dark */
+    --brand-hover:   220  38  38;
+    --brand-fg:      255 255 255;
+    --brand-subtle:   60  20  20;
+  }
+
+  html {
+    @apply bg-bg text-ink;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply min-h-screen bg-bg text-ink antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background: rgb(var(--brand) / 0.35);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--border));
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: rgb(var(--ink-faint)); }
+
+  /* Headings get tighter tracking, slightly heavier */
+  h1, h2, h3, h4 {
+    @apply tracking-tight font-semibold;
+  }
+}
+
+@layer components {
+  /* === Surfaces === */
+  .card {
+    @apply rounded-md bg-surface border border-border;
+  }
+  .panel {
+    @apply rounded-md bg-bg border border-border;
+  }
+
+  /* === Buttons === */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-3.5 py-2 text-sm font-medium
+           transition-colors disabled:opacity-50 disabled:pointer-events-none
+           focus:outline-none focus:shadow-focus;
+  }
+  .btn-primary {
+    @apply btn bg-brand text-brand-fg hover:bg-brand-hover;
+  }
+  .btn-secondary {
+    @apply btn bg-elevated text-ink hover:bg-hover border border-border;
+  }
+  .btn-ghost {
+    @apply btn text-ink-dim hover:text-ink hover:bg-hover;
+  }
+  .btn-outline {
+    @apply btn border border-border text-ink hover:border-brand hover:text-brand;
+  }
+  .btn-danger {
+    @apply btn bg-danger text-white hover:opacity-90;
+  }
+
+  /* === Form === */
+  .input {
+    @apply w-full rounded-md bg-surface border border-border px-3 py-2 text-sm text-ink
+           placeholder:text-ink-faint
+           focus:outline-none focus:border-brand focus:shadow-focus;
+  }
+  .label {
+    @apply text-xs font-semibold uppercase tracking-widest text-ink-dim;
+  }
+
+  /* === Badges === */
+  .badge {
+    @apply inline-flex items-center gap-1 rounded px-2 py-0.5 text-xs font-medium font-mono;
+  }
+  .badge-success  { @apply badge bg-success/10 text-success; }
+  .badge-warning  { @apply badge bg-warning/10 text-warning; }
+  .badge-danger   { @apply badge bg-danger/10 text-danger; }
+  .badge-info     { @apply badge bg-info/10 text-info; }
+  .badge-brand    { @apply badge bg-brand/10 text-brand; }
+  .badge-muted    { @apply badge bg-hover text-ink-dim; }
+
+  /* === Tables === */
+  .data-table {
+    @apply w-full text-sm;
+  }
+  .data-table thead tr {
+    @apply border-b border-border;
+  }
+  .data-table th {
+    @apply text-left px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-ink-dim;
+  }
+  .data-table tbody tr {
+    @apply border-b border-border last:border-b-0 hover:bg-hover transition-colors;
+  }
+  .data-table td {
+    @apply px-4 py-3;
+  }
+
+  /* === Live indicator (red pulsing dot for in-progress calls) === */
+  .live-dot {
+    @apply relative inline-flex h-2 w-2 rounded-full bg-brand;
+  }
+  .live-dot::after {
+    content: "";
+    @apply absolute inset-0 rounded-full bg-brand opacity-75;
+    animation: pulse-ring 1.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* === Lead-temperature pills + gradient tiles ===
+     Designed to mirror the lead flow diagram: cold (left, blue) -> warm
+     (amber) -> hot (red, brand-accent) -> closing (green). Each tile has
+     a subtle gradient + a glowing accent so the dashboard reads at a
+     glance. */
+  .pill-hot   { @apply badge bg-rose-500/10  text-rose-500  border border-rose-500/20; }
+  .pill-warm  { @apply badge bg-amber-500/10 text-amber-500 border border-amber-500/20; }
+  .pill-cold  { @apply badge bg-sky-500/10   text-sky-400   border border-sky-500/20; }
+  .pill-close { @apply badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20; }
+  .pill-dnc   { @apply badge bg-zinc-500/10  text-ink-faint border border-zinc-500/20; }
+
+  .tile {
+    @apply card relative overflow-hidden p-5 transition-all;
+  }
+  .tile:hover { @apply border-ink-faint; }
+  .tile-accent {
+    /* a soft glow strip down the left edge of a stat tile */
+    content: "";
+    @apply absolute left-0 top-0 bottom-0 w-1;
+  }
+  .tile-hot   .tile-accent { @apply bg-gradient-to-b from-rose-500 to-rose-700; }
+  .tile-warm  .tile-accent { @apply bg-gradient-to-b from-amber-400 to-amber-600; }
+  .tile-cold  .tile-accent { @apply bg-gradient-to-b from-sky-400 to-sky-600; }
+  .tile-close .tile-accent { @apply bg-gradient-to-b from-emerald-400 to-emerald-600; }
+
+  /* === Skeleton loader === */
+  .skeleton {
+    @apply rounded bg-hover relative overflow-hidden;
+  }
+  .skeleton::after {
+    content: "";
+    @apply absolute inset-0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(var(--ink-faint) / 0.08) 50%,
+      transparent 100%
+    );
+    animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  }
+  @keyframes skeleton-shimmer {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* === Soft scroll fade for column lists (Kanban pipeline) === */
+  .scroll-fade-bottom {
+    mask-image: linear-gradient(to bottom, black 92%, transparent 100%);
+  }
+
+  /* === Phone-app dialpad === */
+  /* Circular numeric keys, iOS-style. Each key has the digit + a sub-line
+     of letters (ABC, DEF...) for that classic call-pad feel. Active state
+     scales down + brightens the bg slightly for haptic feedback. */
+  .dial-key {
+    @apply relative inline-flex flex-col items-center justify-center
+           rounded-full bg-elevated hover:bg-hover
+           text-ink select-none transition-all
+           border border-border;
+    width: 64px;
+    height: 64px;
+  }
+  .dial-key:active { transform: scale(0.92); background: rgb(var(--brand-subtle)); }
+  .dial-key .digit  { @apply font-mono text-2xl font-semibold leading-none; }
+  .dial-key .letters{ @apply font-mono text-[9px] font-medium uppercase tracking-[0.15em] text-ink-faint mt-1; }
+
+  /* The big circular Call button — iOS-green inverted to our brand red. */
+  .call-button {
+    @apply relative inline-flex items-center justify-center
+           rounded-full bg-brand hover:bg-brand-hover
+           text-brand-fg shadow-lg shadow-brand/30
+           transition-all active:scale-95
+           disabled:opacity-50 disabled:pointer-events-none;
+    width: 72px;
+    height: 72px;
+  }
+  .call-button:focus-visible {
+    outline: 2px solid rgb(var(--brand) / 0.5);
+    outline-offset: 4px;
+  }
+
+  /* Enter-press ripple: an expanding ring radiating from the Call button.
+     Triggered by JS toggling a `data-ripple="on"` attribute for ~700ms. */
+  .call-button[data-ripple="on"]::before,
+  .call-button[data-ripple="on"]::after {
+    content: "";
+    @apply absolute inset-0 rounded-full pointer-events-none;
+    box-shadow: 0 0 0 0 rgb(var(--brand) / 0.55);
+    animation: call-ripple 0.85s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  .call-button[data-ripple="on"]::after { animation-delay: 0.18s; }
+  @keyframes call-ripple {
+    0%   { box-shadow: 0 0 0 0   rgb(var(--brand) / 0.55); opacity: 1; }
+    70%  { box-shadow: 0 0 0 18px rgb(var(--brand) / 0.05); opacity: 0.6; }
+    100% { box-shadow: 0 0 0 26px rgb(var(--brand) / 0);    opacity: 0; }
+  }
+
+  /* The "phone" body — visually separates the dock as a distinct device
+     sitting next to the page content rather than welded to the edge. */
+  .phone-device {
+    @apply rounded-2xl bg-bg border border-border shadow-xl shadow-black/10
+           dark:shadow-black/40 overflow-hidden;
+  }
+}

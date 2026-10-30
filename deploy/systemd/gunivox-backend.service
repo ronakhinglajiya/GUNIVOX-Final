@@ -1,0 +1,25 @@
+[Unit]
+Description=Gunivox backend (FastAPI / uvicorn)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=gunivox
+Group=gunivox
+WorkingDirectory=/opt/gunivox/backend
+Environment="PATH=/opt/gunivox/venv/bin"
+EnvironmentFile=/opt/gunivox/.env
+ExecStart=/opt/gunivox/venv/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2 --log-level info
+Restart=always
+RestartSec=3
+# Don't restart in a tight loop if the process keeps crashing immediately.
+StartLimitIntervalSec=60
+StartLimitBurst=10
+# Log to journald (use `journalctl -u gunivox-backend -f` to tail).
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=gunivox-backend
+
+[Install]
+WantedBy=multi-user.target
