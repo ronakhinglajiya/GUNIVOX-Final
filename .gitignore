@@ -52,3 +52,7 @@ snapshots/
 # Logs
 *.log
 logs/
+
+# Generated sample reports contain real transcripts + phone numbers.
+backend/scripts/_sample_reports/
+backend/scripts/_sample_outcome_reports/
